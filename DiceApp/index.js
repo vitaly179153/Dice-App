@@ -4,7 +4,8 @@ var header = document.getElementById("header");
 var num1 = 0;
 var num2 = 0;
 
-for (var i = 0; i < img1.length; i++) {
+function diceRoll() {
+  for (var i = 0; i < img1.length; i++) {
   var num = Math.floor(Math.random() * 6 + 1);
   img1[i].src = 'images/dice' + num + '.png';
   img1[i].alt = img1[i].src;
@@ -30,3 +31,6 @@ if (num2 < num1) {
 if (num2 === num1) {
     header.innerHTML = "Draw!"
 }
+}
+
+diceRoll();
